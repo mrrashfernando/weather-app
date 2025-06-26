@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 320px;
+    min-height: 320px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+}
+
+main form {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+main form input,
+main form button {
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    flex: 1;
+}
+
+main form button {
+    cursor: pointer;
+    flex: 0;
+    padding: 0 15px;
+}
+
+main .result {
+    padding-top: 20px;
+    text-align: center;
+}
+
+main .result .name {
+    font-weight: 600;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+main .temperature img {
+    width: 120px;
+    margin: 10px 0;
+}
+
+main .temperature figcaption {
+    font-size: 2.5em;
+    font-weight: 500;
+}
+
+main .description {
+    margin: 10px 0 20px;
+    color: #555;
+}
+
+main ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+main li {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 0.9em;
+}
+
+main li:nth-child(2) {
+    background-color: #9b59b6;
+}
+
+main li:nth-child(3) {
+    background-color: #2ecc71;
+}
+
+main ul li i {
+    font-size: 1.5em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+main.error {
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: translateX(4px); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+}
